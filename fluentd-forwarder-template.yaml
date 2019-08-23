@@ -133,13 +133,6 @@ objects:
         private_key_passphrase ${KEY_PASSPHRASE}
       </source>
 
-      <filter **>
-        @type record_transformer
-        <record>
-          forwarded_by "#{ENV['HOSTNAME']}"
-          source_component "OCP"
-        </record>
-      </filter>
 
       <match **>
         @type ${TARGET_TYPE}
